@@ -39,7 +39,7 @@ Variante C: Per iFrame (wenn Seite statisch ist)
 
 
 Im survey.php-Header befindet sich der Konfigurationsblock:
----------------------------------------------------------------------
+
 $SURVEY = [
   'id'       => 'beispiel_tech2025',
   'title'    => 'Welche Technologie findest du am spannendsten?',
@@ -47,15 +47,15 @@ $SURVEY = [
   'options'  => ['Solarenergie','Windenergie','Wasserkraft','Biomasse','Geothermie','Andere'],
   'enable_comment' => true, // Freitextfeld an/aus
 ];
----------------------------------------------------------------------
+
 id: eindeutige Kennung (nur Buchstaben/Zahlen/Unterstrich).
 options: beliebig anpassen.
 enable_comment: Kommentarbox ein-/ausschalten.
 Wichtig: Ändere $IP_SALT auf einen eigenen zufälligen Wert.
 
 
-Hinweise
-========
+Hinweise:
+
 Datenformat: Jede Stimmabgabe ist eine einzelne JSON-Zeile in data/survey_<id>.ndjson. Dadurch lassen sich Daten später leicht weiterverarbeiten (z. B. per Python, jq, etc.).
 
 Mehrere Umfragen: Lege einfach mehrere Kopien von survey.php mit unterschiedlichen $SURVEY['id']/Optionen an oder verwalte die $SURVEY-Konfiguration dynamisch über include.
